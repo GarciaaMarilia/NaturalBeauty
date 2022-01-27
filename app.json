@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "NaturalBeauty",
+    "slug": "NaturalBeauty",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Splash.png",
+    "splash": {
+      "backgroundColor": "#02E3E5"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Splash.png",
+        "backgroundColor": "#02E3E5"
+      }
+    },
+    "web": {
+      "favicon": "./assets/Splash.png"
+    }
+  }
+}
