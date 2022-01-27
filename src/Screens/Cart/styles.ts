@@ -1,25 +1,19 @@
 import { StyleSheet } from 'react-native';
 
-import { theme } from '../../Global/theme';
+import { theme } from '../../Global/Styles/theme';
 
 export const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: theme.colors.gray,
-    },
 
     content: {
         flex: 1,
         backgroundColor: theme.colors.white,
-        borderBottomRightRadius: 50,
-        borderBottomLeftRadius: 50
     },
 
     subtitle: {
         fontFamily: theme.fonts.subtitle,
         color: theme.colors.orange,
         marginHorizontal: 20,
-        marginTop: 40,
+        marginTop: 50,
         fontSize: 20
     },
 
@@ -27,7 +21,6 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.title,
         color: theme.colors.gray,
         marginHorizontal: 20,
-        marginTop: 10,
         fontSize: 50,
     },
 

@@ -6,9 +6,11 @@ import {
     FlatList,
     Image
 } from 'react-native';
-import { ListDivider } from '../../Components/ListDivider/ListDivider';
 
 import { useNaturalBeauty, NaturalBeautyProps } from '../../Global/Providers/NaturalBeautyProvider';
+
+import { ListDivider } from '../../Components/ListDivider/ListDivider';
+import { Avatar } from '../../Components/Avatar/Avatar';
 
 import { styles } from './styles';
 
@@ -45,38 +47,44 @@ export function Cart() {
     }
 
     return (
-        <View style={styles.container}>
-            <View style={styles.content} >
+        <View style={styles.content} >
+            <View style={{ flexDirection: 'row' }}>
 
-                <Text style={styles.subtitle} >
-                    Hello, Marilia!
-                </Text>
+                <View>
+                    <Text style={styles.subtitle} >
+                        Hello, Marilia!
+                    </Text>
 
-                <Text style={styles.title} >
-                    Cart
-                </Text>
+                    <Text style={styles.title} >
+                        Cart
+                    </Text>
+                </View>
 
-                <FlatList
-                    data={naturalBeauty}
-                    renderItem={({ item }) => renderItem(item)}
-                    keyExtractor={(item) => item.id}
-                    showsVerticalScrollIndicator={false}
-                    ItemSeparatorComponent={() => <ListDivider />}
+                <Avatar
+                    urlImage="https://github.com/Garciaamarilia.png"
                 />
-
-                <Text style={styles.payment}>
-                    Subtotal:
-                </Text>
-
-                <Text style={styles.payment}>
-                    Delivery:
-                </Text>
-
-                <Text style={styles.payment}>
-                    Total:
-                </Text>
-
             </View>
+
+            <FlatList
+                data={naturalBeauty}
+                renderItem={({ item }) => renderItem(item)}
+                keyExtractor={(item) => item.id}
+                showsVerticalScrollIndicator={false}
+                ItemSeparatorComponent={() => <ListDivider />}
+            />
+
+            <Text style={styles.payment}>
+                Subtotal:           $
+            </Text>
+
+            <Text style={styles.payment}>
+                Delivery:            $
+            </Text>
+
+            <Text style={styles.payment}>
+                Total:                    $
+            </Text>
+
         </View>
     );
 }
