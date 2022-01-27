@@ -8,8 +8,8 @@ import {
 } from '@expo-google-fonts/poppins';
 import AppLoading from 'expo-app-loading';
 
-import { ScreenRoutes } from './src/Providers/routes/screen.routes';
-import { NaturalBeautyProvider } from './src/Providers/routes/NaturalBeautyProvider';
+import { ScreenRoutes } from './src/Global/Routes/screen.routes';
+import { NaturalBeautyProvider } from './src/Global/Providers/NaturalBeautyProvider';
 
 export default function App() {
 
