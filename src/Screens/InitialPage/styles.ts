@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { theme } from '../../Global/theme';
+import { theme } from '../../Global/Styles/theme';
 
 export const styles = StyleSheet.create({
     image: {
