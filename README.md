@@ -33,7 +33,7 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/natural-beauty.git
+git clone https://github.com/GarciaaMarilia/NaturalBeauty.git
 ```
 
 2. Navigate to the project directory:
