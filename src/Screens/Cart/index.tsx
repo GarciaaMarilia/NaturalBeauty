@@ -6,8 +6,10 @@ import {
 } from "../../Global/Providers/NaturalBeautyProvider";
 
 import { styles } from "./styles";
+import { View, Text, FlatList } from "react-native";
 import { Avatar } from "../../Components/Avatar/Avatar";
-import { View, Text, FlatList, Image } from "react-native";
+import { ProductCard } from "../../Components/ProductCard";
+import { favoriteProducts } from "../../Services/favorites";
 import { ListDivider } from "../../Components/ListDivider/ListDivider";
 
 export function Cart() {
@@ -35,6 +37,14 @@ export function Cart() {
   setDelivery(roundedDelivery);
  }
 
+ async function favoriteProduct(data: string) {
+  try {
+   return await favoriteProducts(data);
+  } catch (error) {
+   console.error(error);
+  }
+ }
+
  useEffect(() => {
   calcSubtotal(naturalBeauty);
   calcDelivery();
@@ -42,21 +52,13 @@ export function Cart() {
 
  function renderItem(item: NaturalBeautyProps) {
   return (
-   <View style={styles.containerItem}>
-    <Image source={item.image} style={styles.image} />
-
-    <View>
-     <Text style={styles.product}>{item.name}</Text>
-     <Text>{item.description}</Text>
-     <Text style={styles.product}>$ {item.price}</Text>
-    </View>
-   </View>
+   <ProductCard item={item} handlefavorite={() => favoriteProduct(item.id)} />
   );
  }
 
  return (
   <View style={styles.content}>
-   <View style={{ flexDirection: "row" }}>
+   <View style={styles.row}>
     <View>
      <Text style={styles.subtitle}>Hello, Marilia!</Text>
 

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/signin.png" alt="SignIn" width="250" height="450" />
+</p>
+
 # Natural Beauty
 
 Welcome to **Natural Beauty**, a React Native application developed with Expo for selling beauty products.
@@ -7,7 +11,7 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 **Natural Beauty** is an e-commerce app designed to offer a wide variety of natural beauty products. With an intuitive interface and attractive features, our app allows users to browse products, add items to cart, and make purchases quickly and conveniently.
 
 <p align="center">
-  <img src="assets/signin.png" alt="SignIn" width="250" height="450" />
+  <img src="assets/home.png" alt="Home" width="250" height="450" />
 </p>
 
 ## Key Features
