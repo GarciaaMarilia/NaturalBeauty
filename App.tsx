@@ -1,34 +1,34 @@
-import React from 'react';
-import { StatusBar } from 'react-native';
+import React from "react";
 
 import {
-  useFonts,
-  Poppins_700Bold,
-  Poppins_300Light
-} from '@expo-google-fonts/poppins';
-import AppLoading from 'expo-app-loading';
+ useFonts,
+ Poppins_700Bold,
+ Poppins_300Light,
+} from "@expo-google-fonts/poppins";
 
-import { ScreenRoutes } from './src/Global/Routes/screen.routes';
-import { NaturalBeautyProvider } from './src/Global/Providers/NaturalBeautyProvider';
+import AppLoading from "expo-app-loading";
+
+import { StatusBar } from "react-native";
+import { ScreenRoutes } from "./src/Global/Routes/screen.routes";
+import { NaturalBeautyProvider } from "./src/Global/Providers/NaturalBeautyProvider";
 
 export default function App() {
+ const [fontsLoading] = useFonts({
+  Poppins_700Bold,
+  Poppins_300Light,
+ });
+ if (!fontsLoading) {
+  return <AppLoading />;
+ }
 
-  const [fontsLoading] = useFonts({
-    Poppins_700Bold,
-    Poppins_300Light
-  });
-  if (!fontsLoading) {
-    return <AppLoading />
-  }
-
-  return (
-    <NaturalBeautyProvider>
-      <StatusBar
-        backgroundColor='transparent'
-        barStyle='light-content'
-        translucent
-      />
-      <ScreenRoutes />
-    </NaturalBeautyProvider>
-  );
+ return (
+  <NaturalBeautyProvider>
+   <StatusBar
+    backgroundColor="transparent"
+    barStyle="light-content"
+    translucent
+   />
+   <ScreenRoutes />
+  </NaturalBeautyProvider>
+ );
 }

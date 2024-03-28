@@ -1,90 +1,84 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
 import {
-    View,
-    Text,
-    FlatList,
-    Image
-} from 'react-native';
+ useNaturalBeauty,
+ NaturalBeautyProps,
+} from "../../Global/Providers/NaturalBeautyProvider";
 
-import { useNaturalBeauty, NaturalBeautyProps } from '../../Global/Providers/NaturalBeautyProvider';
-
-import { ListDivider } from '../../Components/ListDivider/ListDivider';
-import { Avatar } from '../../Components/Avatar/Avatar';
-
-import { styles } from './styles';
+import { styles } from "./styles";
+import { Avatar } from "../../Components/Avatar/Avatar";
+import { View, Text, FlatList, Image } from "react-native";
+import { ListDivider } from "../../Components/ListDivider/ListDivider";
 
 export function Cart() {
+ const { naturalBeauty } = useNaturalBeauty();
+ const [subtotal, setSubtotal] = useState<number>(0);
+ const [delivery, setDelivery] = useState<number>(0);
 
-    const { naturalBeauty } = useNaturalBeauty();
+ function calcSubtotal(products: NaturalBeautyProps[]) {
+  let subTotal: number = 0;
 
-    function renderItem(item: NaturalBeautyProps) {
-        return (
-            <View style={{
-                flexDirection: 'row',
-                flex: 1
-            }}
-            >
-                <Image
-                    source={item.image}
-                    style={styles.image}
-                />
+  const prices: number[] = products.map((product: NaturalBeautyProps) => {
+   return product.price;
+  });
 
-                <View>
-                    <Text style={styles.product}>
-                        {item.name}
-                    </Text>
-                    <Text>
-                        {item.description}
-                    </Text>
-                    <Text style={styles.product}>
-                        $ {item.price}
-                    </Text>
-                </View>
+  subTotal = prices.reduce((total, price) => total + price, 0);
 
-            </View>
-        );
-    }
+  setSubtotal(subTotal);
+ }
 
-    return (
-        <View style={styles.content} >
-            <View style={{ flexDirection: 'row' }}>
+ function calcDelivery() {
+  const randomDelivery = Math.random() * 2000;
 
-                <View>
-                    <Text style={styles.subtitle} >
-                        Hello, Marilia!
-                    </Text>
+  const roundedDelivery = Math.round(randomDelivery) / 100;
 
-                    <Text style={styles.title} >
-                        Cart
-                    </Text>
-                </View>
+  setDelivery(roundedDelivery);
+ }
 
-                <Avatar
-                    urlImage="https://github.com/Garciaamarilia.png"
-                />
-            </View>
+ useEffect(() => {
+  calcSubtotal(naturalBeauty);
+  calcDelivery();
+ }, [naturalBeauty]);
 
-            <FlatList
-                data={naturalBeauty}
-                renderItem={({ item }) => renderItem(item)}
-                keyExtractor={(item) => item.id}
-                showsVerticalScrollIndicator={false}
-                ItemSeparatorComponent={() => <ListDivider />}
-            />
+ function renderItem(item: NaturalBeautyProps) {
+  return (
+   <View style={styles.containerItem}>
+    <Image source={item.image} style={styles.image} />
 
-            <Text style={styles.payment}>
-                Subtotal:           $
-            </Text>
+    <View>
+     <Text style={styles.product}>{item.name}</Text>
+     <Text>{item.description}</Text>
+     <Text style={styles.product}>$ {item.price}</Text>
+    </View>
+   </View>
+  );
+ }
 
-            <Text style={styles.payment}>
-                Delivery:            $
-            </Text>
+ return (
+  <View style={styles.content}>
+   <View style={{ flexDirection: "row" }}>
+    <View>
+     <Text style={styles.subtitle}>Hello, Marilia!</Text>
 
-            <Text style={styles.payment}>
-                Total:                    $
-            </Text>
+     <Text style={styles.title}>Cart</Text>
+    </View>
 
-        </View>
-    );
+    <Avatar urlImage="https://github.com/Garciaamarilia.png" />
+   </View>
+
+   <FlatList
+    data={naturalBeauty}
+    renderItem={({ item }) => renderItem(item)}
+    keyExtractor={(item) => item.id}
+    showsVerticalScrollIndicator={false}
+    ItemSeparatorComponent={() => <ListDivider />}
+   />
+
+   <Text style={styles.payment}>Subtotal: ${subtotal}</Text>
+
+   <Text style={styles.payment}>Delivery: ${delivery}</Text>
+
+   <Text style={styles.payment}>Total: ${subtotal + delivery} </Text>
+  </View>
+ );
 }
