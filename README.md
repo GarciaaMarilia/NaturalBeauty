@@ -31,6 +31,28 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 ## Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/your-username/natural-beauty.git
    ```
+
+2. Navigate to the project directory:
+
+```bash
+cd natural-beauty
+```
+
+3. Install dependencies:
+
+```bash
+yarn install
+```
+
+4. Execution
+   To start the application, you can use the Expo CLI. Make sure your development environment is properly set up on your device or emulator.
+
+```bash
+expo start
+```
+
+This will launch the Expo DevTools in your browser and display a QR code. Scan the QR code with the Expo Go app on your device or click one of the available options to open the app in an emulator.
