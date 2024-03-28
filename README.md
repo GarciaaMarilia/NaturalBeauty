@@ -25,22 +25,22 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 ## Prerequisites
 
 - Node.js 14.x
-- Yarn (or npm)
+- Yarn
 - Expo CLI
 
 ## Installation
 
 1. Clone this repository:
 
-   ```bash
-   git clone https://github.com/your-username/natural-beauty.git
-   ```
+````bash
+git clone https://github.com/your-username/natural-beauty.git
+```
 
 2. Navigate to the project directory:
 
 ```bash
 cd natural-beauty
-```
+````
 
 3. Install dependencies:
 
