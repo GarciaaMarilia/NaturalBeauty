@@ -32,7 +32,7 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 
 1. Clone this repository:
 
-````bash
+```bash
 git clone https://github.com/your-username/natural-beauty.git
 ```
 
@@ -49,7 +49,8 @@ yarn install
 ```
 
 4. Execution
-   To start the application, you can use the Expo CLI. Make sure your development environment is properly set up on your device or emulator.
+
+To start the application, you can use the Expo CLI. Make sure your development environment is properly set up on your device or emulator.
 
 ```bash
 expo start
