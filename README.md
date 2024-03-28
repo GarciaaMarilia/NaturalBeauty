@@ -7,7 +7,7 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 **Natural Beauty** is an e-commerce app designed to offer a wide variety of natural beauty products. With an intuitive interface and attractive features, our app allows users to browse products, add items to cart, and make purchases quickly and conveniently.
 
 <p align="center">
-  <img src="assets/signin.png" alt="SignIn" width="300" height="450" />
+  <img src="assets/signin.png" alt="SignIn" width="250" height="450" />
 </p>
 
 ## Key Features
@@ -33,7 +33,7 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 - Expo CLI
 
 <p align="center">
-  <img src="assets/cart.png" alt="Cart" width="300" height="450" />
+  <img src="assets/cart.png" alt="Cart" width="250" height="450" />
 </p>
 
 ## Installation
