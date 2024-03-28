@@ -40,7 +40,7 @@ git clone https://github.com/your-username/natural-beauty.git
 
 ```bash
 cd natural-beauty
-````
+```
 
 3. Install dependencies:
 
