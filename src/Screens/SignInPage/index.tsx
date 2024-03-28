@@ -10,7 +10,7 @@ import { theme } from "../../Global/Styles/theme";
 import { useNavigation } from "@react-navigation/native";
 import { ScreenRoutesNames } from "../../Global/Routes/screen.routes";
 
-export function InitialPage() {
+export function SignInPage() {
  const navigation = useNavigation();
 
  function handleSignIn() {

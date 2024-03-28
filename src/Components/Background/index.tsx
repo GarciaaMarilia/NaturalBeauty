@@ -1,16 +1,12 @@
-import React, { ReactNode } from 'react'
-import { View } from 'react-native';
+import React, { ReactNode } from "react";
 
-import { styles } from './styles';
+import { styles } from "./styles";
+import { View } from "react-native";
 
 type Props = {
-    children: ReactNode;
-}
+ children: ReactNode;
+};
 
 export default function Background({ children }: Props) {
-    return (
-        <View style={styles.container}>
-            {children}
-        </View>
-    )
+ return <View style={styles.container}>{children}</View>;
 }
