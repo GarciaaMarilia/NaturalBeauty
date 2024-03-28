@@ -28,6 +28,7 @@ Welcome to **Natural Beauty**, a React Native application developed with Expo fo
 - Expo
 - TypeScript
 - React Navigation
+- AsyncStorage
 - Context API for state management
 
 ## Prerequisites
