@@ -1,11 +1,23 @@
-import React from 'react';
+import React from "react";
 
-import { View } from 'react-native';
+import { styles } from "./styles";
+import { Text, View } from "react-native";
+import { loadFavorites } from "../../Services/favorites";
+import { useFocusEffect } from "@react-navigation/native";
 
-export function Favorites(){
-    return(
-        <View>
+async function loadContent() {
+ const response = await loadFavorites();
+ return response;
+}
 
-        </View>
-    );
+export function Favorites() {
+ useFocusEffect(() => {
+  loadContent();
+ });
+
+ return (
+  <View style={styles.content}>
+   <Text style={styles.title}>Favorites</Text>
+  </View>
+ );
 }

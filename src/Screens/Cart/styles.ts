@@ -8,11 +8,6 @@ export const styles = StyleSheet.create({
   backgroundColor: theme.colors.white,
  },
 
- containerItem: {
-  flexDirection: "row",
-  flex: 1,
- },
-
  subtitle: {
   fontFamily: theme.fonts.subtitle,
   color: theme.colors.orange,
@@ -28,24 +23,14 @@ export const styles = StyleSheet.create({
   fontSize: 50,
  },
 
- image: {
-  height: 100,
-  width: 100,
-  marginVertical: 8,
-  marginHorizontal: 14,
-  borderRadius: 10,
- },
-
- product: {
-  fontFamily: theme.fonts.title,
-  color: theme.colors.gray,
-  fontSize: 20,
- },
-
  payment: {
   fontFamily: theme.fonts.title,
   fontSize: 20,
   marginLeft: 30,
   marginVertical: 12,
+ },
+
+ row: {
+  flexDirection: "row",
  },
 });
