@@ -33,7 +33,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
    },
    {
     id: "002",
-    name: "Fragrance",
+    name: "Sauvage",
     description: "Fragrance Dior",
     price: 80,
     image: {
@@ -51,7 +51,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
    },
    {
     id: "004",
-    name: "Fragrance",
+    name: "Sauvage",
     description: "Fragrance Dior",
     price: 80,
     image: {
@@ -60,7 +60,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
    },
    {
     id: "005",
-    name: "Fragrance",
+    name: "Sauvage",
     description: "Fragrance Dior",
     price: 80,
     image: {
@@ -69,7 +69,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
    },
    {
     id: "006",
-    name: "Fragrance",
+    name: "Sauvage",
     description: "Fragrance Dior",
     price: 80,
     image: {
