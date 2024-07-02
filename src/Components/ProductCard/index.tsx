@@ -1,10 +1,10 @@
 import React from "react";
 
+import { styles } from "./styles";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { theme } from "../../Global/Styles/theme";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { NaturalBeautyProps } from "../../Global/Providers/NaturalBeautyProvider";
-import { styles } from "./styles";
 
 interface Props {
  item: NaturalBeautyProps;

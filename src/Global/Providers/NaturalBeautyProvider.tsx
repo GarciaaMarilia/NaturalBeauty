@@ -7,6 +7,7 @@ export interface NaturalBeautyProps {
  description: string;
  image: ImageSourcePropType;
  price: number;
+ favorite: boolean;
 }
 
 interface NaturalBeautyContextData {
@@ -30,6 +31,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
     image: {
      uri: "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dw88c4f783/images/Color%20BR/DIOR/rouge/P1_3348901570060_1500px.jpg?sw=556&sh=680&sm=fit",
     },
+    favorite: false,
    },
    {
     id: "002",
@@ -39,6 +41,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
     image: {
      uri: "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbd925da8/images/hi-res-BR/p1_60ml_3348901368254_1500px_1.jpg?sw=556&sh=680&sm=fit",
     },
+    favorite: false,
    },
    {
     id: "003",
@@ -48,6 +51,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
     image: {
      uri: "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwc1727610/images/hi-res-BR/3348901452489_1500px.jpg?sw=556&sh=680&sm=fit",
     },
+    favorite: false,
    },
    {
     id: "004",
@@ -57,6 +61,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
     image: {
      uri: "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbd925da8/images/hi-res-BR/p1_60ml_3348901368254_1500px_1.jpg?sw=556&sh=680&sm=fit",
     },
+    favorite: false,
    },
    {
     id: "005",
@@ -66,6 +71,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
     image: {
      uri: "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbd925da8/images/hi-res-BR/p1_60ml_3348901368254_1500px_1.jpg?sw=556&sh=680&sm=fit",
     },
+    favorite: false,
    },
    {
     id: "006",
@@ -75,6 +81,7 @@ export const NaturalBeautyProvider: React.FC = ({ children }) => {
     image: {
      uri: "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbd925da8/images/hi-res-BR/p1_60ml_3348901368254_1500px_1.jpg?sw=556&sh=680&sm=fit",
     },
+    favorite: false,
    },
   ]);
  }, []);
